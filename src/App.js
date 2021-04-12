@@ -1,10 +1,10 @@
 import React from "react";
-import BoardMain from "./component/BoardMain";
+import BoardWrite from "./component/BoardWrite";
 
 const App = () => {
   return (
     <div>
-      <BoardMain />
+      <BoardWrite />
     </div>
   );
 };
