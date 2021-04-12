@@ -4,7 +4,9 @@ const BoardMain = () => {
   return (
     <div>
       게시판
-      <input className="title" type="text" />
+      <div>
+        <input className="title" type="text" placeholder="제목" />
+      </div>
     </div>
   );
 };
