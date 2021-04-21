@@ -1,10 +1,10 @@
 import React from "react";
-import BoardWrite from "./component/BoardWrite";
+import SignMain from "./Sign/SignMain";
 
 const App = () => {
   return (
     <div>
-      <BoardWrite />
+      <SignMain />
     </div>
   );
 };
