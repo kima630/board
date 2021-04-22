@@ -1,10 +1,10 @@
 import React from "react";
-import SignMain from "./Sign/SignMain";
+import LoginPage from "./Sign/LoginPage";
 
 const App = () => {
   return (
     <div>
-      <SignMain />
+      <LoginPage />
     </div>
   );
 };
