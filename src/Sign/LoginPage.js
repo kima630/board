@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import "./LoginPage.scss";
+import { loginUser } from "../_actions/user_action";
 
 const LoginPage = () => {
-  const [Id, setId] = useState("");
+  const dispatch = useDispatch();
+
+  const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
 
   // currentTarget를 사용하면 이벤트가 바인딩 된 해당하는 요소를 반환하며,
   // 하위 구조가 복잡해질 때 사용하면 편리함.
   const onIdHandler = (e) => {
-    setId(e.currentTarget.value);
+    setEmail(e.currentTarget.value);
   };
 
   const onPasswordHandler = (e) => {
@@ -18,21 +23,32 @@ const LoginPage = () => {
   // refresh 되면 event에 들어갈 것들이 행해지지 않음.
   const onSubmitHandler = (e) => {
     e.preventDefault();
+
+    alert("Email", Email);
+    alert("Password", Password);
+
+    // let은 재할당 가능, 재선언 불가
+    let body = {
+      email: Email,
+      password: Password,
+    };
+
+    dispatch(loginUser(body));
   };
 
   return (
     <div className="LoginPage">
-      <form>
-        <label>ID</label>
+      <form className="login" onSubmit={onSubmitHandler}>
+        <label>Email:</label>
         <br />
         <input
-          className="id"
+          className="email"
           type="text"
-          value={Id}
+          value={Email}
           onChange={onIdHandler}
         ></input>
         <br />
-        <label>PASSWORD</label>
+        <label>Password:</label>
         <br />
         <input
           className="pw"
