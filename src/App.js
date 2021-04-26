@@ -1,5 +1,5 @@
-import React from "react";
-import LoginPage from "./Sign/LoginPage";
+import React from 'react';
+import LoginPage from './Sign/LoginPage';
 
 const App = () => {
   return (

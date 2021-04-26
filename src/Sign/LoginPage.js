@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import "./LoginPage.scss";
-import { loginUser } from "../_actions/user_action";
+import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import './LoginPage.scss';
+import {loginUser} from '../_actions/user_action';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
 
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
+  const [Email, setEmail] = useState('');
+  const [Password, setPassword] = useState('');
 
   // currentTarget를 사용하면 이벤트가 바인딩 된 해당하는 요소를 반환하며,
   // 하위 구조가 복잡해질 때 사용하면 편리함.
@@ -24,11 +24,11 @@ const LoginPage = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
-    alert("Email", Email);
-    alert("Password", Password);
+    alert('Email', Email);
+    alert('Password', Password);
 
     // let은 재할당 가능, 재선언 불가
-    let body = {
+    const body = {
       email: Email,
       password: Password,
     };
